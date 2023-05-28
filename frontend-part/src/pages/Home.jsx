@@ -1,8 +1,11 @@
 import React from 'react'
+import ParticlesBg from '../components/ParticlesBg';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+        <ParticlesBg />
+    </div>
   )
 }
 

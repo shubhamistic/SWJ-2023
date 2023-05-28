@@ -1,22 +1,28 @@
-import './App.css';
-import NavigationBar from './components/NavigationBar'
-import About from './pages/About'
-import Home from './pages/Home'
-import Sponsors from './pages/Sponsors'
-import Teams from './pages/Teams'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import "./App.css";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import Teams from "./pages/Teams";
+import Sponsors from "./pages/Sponsors";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Register from "./pages/Register";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <NavigationBar />
-      <Routes>
-        <Route exact path='/about' element={<About />}></Route>
-        <Route exact path='/' element={<Home />}></Route>
-        <Route exact path='/sponsors' element={<Sponsors />}></Route>
-        <Route exact path='/teams' element={<Teams />}></Route>
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/sponsors" element={<Sponsors />} />
+          <Route exact path="/teams" element={<Teams />} />
+          <Route exact path="/register" element={<Register />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
