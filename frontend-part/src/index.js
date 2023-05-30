@@ -4,11 +4,30 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Register from './pages/Register';
+import Sponsors from './pages/Sponsors';
+import Teams from './pages/Teams';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<App/>}>
+      <Route index={true} path='/' element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/register' element={<Register/>}/>
+      <Route path='sponsors' element={<Sponsors/>}/>
+      <Route path='/teams' element={<Teams/>}/>
+    </Route>
+  )
+)
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
