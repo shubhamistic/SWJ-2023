@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+
+body{
+    margin: 0;
+    overscroll-behavior: none;
+    font-family: 'Konkhmer Sleokchher', cursive;
+}
+
+nav{
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff2d4;
+    border: solid 1px goldenrod;
+}
+
+#heading{
+    margin-left: 15px;
+    align-self: center;
+    font-size: 25px;
+    color: goldenrod;
+}
+
+#button-container{
+    display: flex;
+}
+
+.button{
+    margin-right: 15px;
+    align-self: center;
+    font-size: 25px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: darkgoldenrod;
+}
+.button i{
+    font-size: 25px;
+    color: black;
+}
+
+
+#data-container{
+    /*display: none;*/
+    height: calc(100vh - 50px);
+    width: 100vw;
+    overflow: scroll;
+}
+table{
+    width: 100vw;
+    border-collapse: collapse;
+}
+table tr td {
+    padding: 0 5px 0 5px;
+    background-color: wheat;
+    border: 1px solid goldenrod;
+    text-align: center;
+}
+table tr th {
+    position: sticky;
+    top: 0;
+    padding: 0 5px 0 5px;
+    background-color: gold;
+    border-left: solid 1px goldenrod;
+    border-right: solid 1px goldenrod;
+}
