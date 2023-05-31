@@ -1,11 +1,14 @@
 import React from 'react'
 import ParticlesBg from '../components/ParticlesBg';
+import { Container } from 'react-bootstrap';
 
 const Home = () => {
   return (
-    <div>
-        <ParticlesBg />
-    </div>
+
+        <Container className='heroContainer'>
+            <ParticlesBg/>
+        </Container>
+        
   )
 }
 
