@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
 import NavLogo from "./../assets/logo-nav.png";
+import { LinkContainer } from "react-router-bootstrap";
 
 function NavBar() {
   return (
@@ -25,11 +26,11 @@ function NavBar() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="/teams">Teams</Nav.Link>
-              <Nav.Link href="/sponsors">Sponsors</Nav.Link>
-              <Nav.Link href="#">SWJ</Nav.Link>
+              <LinkContainer to='/'><Nav.Link>Home</Nav.Link></LinkContainer>
+              <LinkContainer to="/about"><Nav.Link href="/about">About</Nav.Link></LinkContainer>
+              <LinkContainer to="/teams"><Nav.Link href="/teams">Teams</Nav.Link></LinkContainer>
+              <LinkContainer to="/sponsors"><Nav.Link href="/sponsors">Sponsors</Nav.Link></LinkContainer>
+              <LinkContainer to="/teams"><Nav.Link>SWJ</Nav.Link></LinkContainer>
               <Button variant="outline-success">Register</Button>
             </Nav>
           </Offcanvas.Body>
