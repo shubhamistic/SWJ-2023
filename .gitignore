@@ -13,6 +13,7 @@ build
 
 # misc
 .DS_Store
+.idea/
 .env.local
 .env.development.local
 .env.test.local
@@ -21,3 +22,14 @@ build
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# backend-part
+backend-part/.gitignore
+backend-part/bin/
+backend-part/include/
+backend-part/lib/
+backend-part/__pycache__/
+backend-part/pyvenv.cfg
+backend-part/static/js/jquery-3.6.3.js
+backend-part/mailer
+backend-part/templates/clientQR.html
