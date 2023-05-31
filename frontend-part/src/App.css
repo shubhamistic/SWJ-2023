@@ -147,4 +147,19 @@
   justify-content: center;
 }
 
+*{
+  overflow-x:hidden; /*fixes horizontal scroll*/
+}
+
+.heroContainer{
+  height: 90vh;
+}
+.footerStyle{
+  z-index: 1;
+  background-color: white;
+
+}
+.footerTitles{
+  overflow-y: hidden;
+}
 /* Sponsors Page End */

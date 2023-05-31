@@ -14,7 +14,7 @@ import footerData from "./../data/footer";
 
 const Footer = () => {
   return (
-    <div className="border-top border-success" style={{ borderTop: "2px solid #000" }}>
+    <div className="border-top border-success footerStyle" style={{ borderTop: "2px solid #000"}}>
       <footer className="text-center text-lg-start text-dark">
         <div className="container p-4">
           <div className="row my-4">
@@ -82,7 +82,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-success" style={{ color: "#000" }}>
+              <h5 className="text-uppercase mb-4 text-success footerTitles" style={{ color: "#000" }}>
                 Links
               </h5>
 
@@ -102,7 +102,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-success" style={{ color: "#000" }}>
+              <h5 className="text-uppercase mb-4 text-success footerTitles" style={{ color: "#000" }}>
                 Contact
               </h5>
 
@@ -135,7 +135,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0 ">
-              <h5 className="text-uppercase mb-4 text-success" style={{ color: "#000" }}>
+              <h5 className="text-uppercase mb-4 text-success footerTitles" style={{ color: "#000" }}>
                 Address
               </h5>
               <ul className="list-unstyled ">

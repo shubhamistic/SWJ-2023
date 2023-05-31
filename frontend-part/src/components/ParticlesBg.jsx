@@ -25,12 +25,12 @@ const ParticlesBg = () => {
       options={{
         background: {
           color: {
-            value: "#198754",
+            value: "#EAB53D",
           },
         },
         fullScreen: {
-          enable: false,
-          zIndex: 0,
+          enable: true,
+          zIndex: -1,
         },
         fpsLimit: 120,
         interactivity: {
