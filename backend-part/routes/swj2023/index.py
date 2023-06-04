@@ -1,11 +1,12 @@
 from flask import Blueprint, request, abort, render_template, send_file
 from re import match
-from os import remove
+from os import remove, path
 from datetime import datetime
 import json
 import uuid
 import pandas as pd
 from models.swj2023 import database
+from mailer.swj2023 import mailer
 
 
 # Create a blueprint for /swj2023 route
@@ -57,7 +58,7 @@ def download():
 
 
 @swj2023_routes.route('/create', methods=['POST'])
-def create():
+async def create():
     data = request.get_data().decode('utf-8')
     p_uuid = str(uuid.uuid4())
     p_name = json.loads(data)['name']
@@ -107,13 +108,19 @@ def create():
     }
     try:
         database.createRecord(record)
+
+        # send the mail to the participant
+        if mailer.sendMail(record):
+            # update to the database that mail has been sent
+            database.setMailSent(p_uuid, status=True)
+
         return {
             "message": "Data Successfully Inserted!",
             "fulfilled": True,
             "uuid": p_uuid
         }
-    except Exception:
-        abort(500, 'Error: Database error!')
+    except Exception as e:
+        abort(500, 'Error: Database error!', e)
 
 
 @swj2023_routes.route('/event/<uuid_>', methods=['GET'])
@@ -140,3 +147,18 @@ def scan():
         return render_template("QRScanner.html")
     else:
         abort(401, 'Error: Unauthorized, incorrect password!')
+
+
+@swj2023_routes.route('/create-client-qr')
+def createClientQR():
+    uuid_ = request.args.get('uuid')
+    return render_template("clientQR.html", uuid_=uuid_)
+
+
+@swj2023_routes.route('/file/QR/<qr_file_name>')
+def returnQRFile(qr_file_name):
+    file_path = f"./data/swj2023/QRs/{qr_file_name}"
+    if path.exists(file_path):
+        return send_file(file_path, mimetype='image/png')
+    else:
+        abort(404, 'Error: Requested file not found!')
