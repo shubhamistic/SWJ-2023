@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="canvas"></div>
+        <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.min.js"></script>
+        <script type="text/javascript">
+            const qrCode = new QRCodeStyling({
+                width: 400,
+                height: 400,
+                type: "svg",
+                data: "{{ uuid_ }}",
+                image: "{{ url_for('static', filename='images/swj_logo.svg') }}",
+                dotsOptions: {
+                    type: "extra-rounded",
+                    gradient: {
+                        type: "radial",
+                        colorStops: [
+                            { offset: 0, color: '#EAB53D' },
+                            { offset: 1, color: '#EE6F2D' }
+                        ]
+                    }
+                },
+                cornersSquareOptions: {
+                    type: "extra-rounded"
+                },
+                backgroundOptions: {
+                    color: "#FFFFFF",
+                },
+                imageOptions: {
+                    crossOrigin: "anonymous"
+                }
+            });
+            qrCode.append(document.getElementById("canvas"));
+            qrCode.download({ name: "qr_{{ uuid_ }}"});
+        </script>
+    </body>
+</html>
