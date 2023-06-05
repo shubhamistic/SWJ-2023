@@ -1,5 +1,6 @@
 # SWJ-2023 Backend
 
+## Developed by, [@shubhamistic](https://github.com/shubhamistic)
 
 ## SETUP (Ubuntu)
 
@@ -13,6 +14,9 @@
   sudo apt update
   
   sudo apt install nginx
+  
+  sudo apt-get install google-chrome-stable
+  chmod +x chromedriver
   ```
 
 - Open nginx configuration file:
@@ -41,8 +45,9 @@
   export DB_HOST="<db-hostname>"
   export DB_USER="<db-username>"
   export DB_PASS="<db-password>"
-  GOOGLE_CLIENT_ID="<your-google-client-id>"
-  GOOGLE_CLIENT_SECRET="<your-google-client-secret>"
+  export WEB_HOST="<your-web-hosting-domain-name>"
+  export GOOGLE_CLIENT_SECRET_PATH="<path-to-google-client_secret.json>"
+  export WEBDRIVER_PATH="<path-to-google-chrome-webdriver>"
   ```
   
 - Execute commands from a bash_profile in current shell environment:
@@ -66,14 +71,15 @@
     p_age TEXT,
     p_gender TEXT,
     p_transaction_id TEXT,
+    p_mail_status boolean DEFAULT false,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   );
   
-  
-     CREATE TABLE auth(
+  CREATE TABLE auth(
     pass TEXT NOT NULL,
     access TEXT NOT NULL
   );
+  
   COMMIT;
   ```
 
@@ -92,12 +98,11 @@
   
   pip install -r requirements.txt
   ```
+  
+- Download chrome web driver
+  [CLICK HERE](https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/)
 
 - Run the server using:
   ```bash
   gunicorn --bind 127.0.0.1:5000 app:app
   ```
-  
-
-## Author
-[@shubhamistic](https://github.com/shubhamistic)
