@@ -5,13 +5,14 @@ const Sponsor = () => {
   return (
     <div className="main-sponsors">
       {sponsorsData.map((res) => (
-        <div class="nft">
-          <div class="main">
+        <div className="nft" key={res.id}>
+          <div className="main">
             <a href={res.link} target="_blank" rel="noreferrer">
-              <img class="tokenImage" src={res.image} alt="Sponsor" />
+              <img className="tokenImage" src={res.image} alt="Sponsor" />
             </a>
-            <h2 className="text-center text-success">{res.name}</h2><hr />
-            <p class="description text-center text-success">{res.desc}</p>
+            <h1 className="text-center">{res.name}</h1>
+            <hr />
+            <p className="description text-center">{res.desc}</p>
           </div>
         </div>
       ))}

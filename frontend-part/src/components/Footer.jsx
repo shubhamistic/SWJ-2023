@@ -26,7 +26,7 @@ const Footer = () => {
                 <img src={logo} height="120" alt="" loading="lazy" />
               </div>
               <p className="text-center">
-                <span style={{ color: "#000" }}></span>
+                <span style={{ color: "#EAB53D" }}></span>
                 StartUp Weekend Jaipur
               </p>
 
@@ -39,7 +39,7 @@ const Footer = () => {
                     href={footerData[3][0]}
                   >
                     <i>
-                      <FaFacebook color="green" />
+                      <FaFacebook color="#EAB53D" />
                     </i>
                   </a>
                 </li>
@@ -51,7 +51,7 @@ const Footer = () => {
                     href={footerData[3][1]}
                   >
                     <i>
-                      <FaInstagram color="green" />
+                      <FaInstagram color="#EAB53D" />
                     </i>
                   </a>
                 </li>
@@ -63,7 +63,7 @@ const Footer = () => {
                     href={footerData[3][2]}
                   >
                     <i>
-                      <FaTwitter color="green" />
+                      <FaTwitter color="#EAB53D" />
                     </i>
                   </a>
                 </li>
@@ -75,14 +75,14 @@ const Footer = () => {
                     href={footerData[3][3]}
                   >
                     <i>
-                      <FaLinkedin color="green" />
+                      <FaLinkedin color="#EAB53D" />
                     </i>
                   </a>
                 </li>
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-success footerTitles" style={{ color: "#000" }}>
+              <h5 className="text-uppercase mb-4 footerTitles" style={{ color: "black" }}>
                 Links
               </h5>
 
@@ -102,7 +102,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase mb-4 text-success footerTitles" style={{ color: "#000" }}>
+              <h5 className="text-uppercase mb-4 footerTitles" style={{ color: "black" }}>
                 Contact
               </h5>
 
@@ -112,7 +112,7 @@ const Footer = () => {
                     <li>
                       <p>
                         <i>
-                          <FaRegAddressCard color="green" />
+                          <FaRegAddressCard color="#EAB53D" />
                         </i>{" "}
                         {res.name}
                       </p>
@@ -120,7 +120,7 @@ const Footer = () => {
                     <li>
                       <p>
                         <i>
-                          <FaPhoneAlt color="green" />
+                          <FaPhoneAlt color="#EAB53D" />
                         </i>{" "}
                         {res.phone}
                       </p>
@@ -135,14 +135,14 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0 ">
-              <h5 className="text-uppercase mb-4 text-success footerTitles" style={{ color: "#000" }}>
+              <h5 className="text-uppercase mb-4 footerTitles" style={{ color: "black" }}>
                 Address
               </h5>
               <ul className="list-unstyled ">
                 <li>
                   <p>
                     <i>
-                      <FaMapMarker color="green" />
+                      <FaMapMarker color="#EAB53D" />
                     </i>
                     {footerData[1][0].address}
                   </p>
@@ -150,7 +150,7 @@ const Footer = () => {
                 <li>
                   <p>
                     <i>
-                      <FaPhoneAlt color="green" />
+                      <FaPhoneAlt color="#EAB53D" />
                     </i>{" "}
                     {footerData[1][0].phone}
                   </p>
@@ -158,7 +158,7 @@ const Footer = () => {
                 <li>
                   <p>
                     <i>
-                      <FaMailBulk color="green" />
+                      <FaMailBulk color="#EAB53D" />
                     </i>{" "}
                     {footerData[1][0].email}
                   </p>
@@ -168,7 +168,7 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className="text-center p-3 bg-success border-top border-success"
+          className="text-center p-3 bg-#EAB53D border-top border-success"
         >
           © 2023 <span style={{ color: "#000" }}>StartUp Weekend Jaipur</span>
           @ Manipal University Jaipur
