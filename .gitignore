@@ -30,19 +30,14 @@ backend-part/include/
 backend-part/lib/
 backend-part/__pycache__/
 backend-part/pyvenv.cfg
-
-# test files
+# ignore test files for development mode
 backend-part/templates/test.html
 backend-part/static/js/test.js
-
-# ignore jQquery as it is for development testing only
 backend-part/static/js/jquery-3.6.3.js
-
-# ignore gmail confidential files
-backend-part/token.json
-backend-part/mailer/swj2023/client_secret.json
-backend-part/mailer/swj2023/chromedriver
-
-# ignore all other file except __init__.txt
-backend-part/data/swj2023/QRs/*
-!backend-part/data/swj2023/QRs/__init__.txt
+# ignore gmail confidential files and chrome web driver
+backend-part/mailers/token.json
+backend-part/mailers/client_secret.json
+backend-part/mailers/chromedriver
+# ignore participant data file except __init__.txt
+backend-part/data/QRs/*
+!backend-part/data/QRs/__init__.txt
