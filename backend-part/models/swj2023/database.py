@@ -59,7 +59,7 @@ def createRecord(record):
     query = """
         INSERT INTO
         records (p_uuid, p_name, p_mob_num, p_email, p_workplace, p_city, p_age, p_gender, p_transaction_id)
-        VALUES ((%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s))
+        VALUES ((%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s));
     """
     cur.execute(query, (
         record['p_uuid'],
@@ -111,3 +111,14 @@ def getParticipantInfo(uuid):
     cur.execute(query, (uuid,))
     participant_record = cur.fetchone()
     return participant_record
+
+
+# function to set mail sent status (True or False)
+def setMailSent(uuid, status):
+    query = """
+        UPDATE records
+        SET p_mail_status = (%s)
+        WHERE p_uuid = (%s);
+    """
+    cur.execute(query, (status, uuid))
+    conn.commit()
