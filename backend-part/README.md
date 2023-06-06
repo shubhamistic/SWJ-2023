@@ -62,17 +62,17 @@
   USE swj2023;
     
   CREATE TABLE records (
-    p_uuid VARCHAR(36) PRIMARY KEY,
-    p_name TEXT,
-    p_mob_num TEXT,
-    p_email TEXT,
-    p_workplace TEXT,
-    p_city TEXT,
-    p_age TEXT,
-    p_gender TEXT,
-    p_transaction_id TEXT,
-    p_mail_status boolean DEFAULT false,
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    uuid VARCHAR(36) PRIMARY KEY,
+    name TEXT NOT NULL,
+    phone VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    workPlace TEXT NOT NULL,
+    city TEXT NOT NULL,
+    age TEXT NOT NULL,
+    gender TEXT NOT NULL,
+    transactionId VARCHAR(255) NOT NULL UNIQUE,
+    mailStatus boolean DEFAULT false NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
   );
   
   CREATE TABLE auth(

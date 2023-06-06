@@ -18,7 +18,7 @@ def isEmailUnique(email):
     query = """
         SELECT COUNT(*)
         FROM records
-        WHERE p_email = (%s)
+        WHERE email = (%s)
         LIMIT 1;
     """
     cur.execute(query, (email,))
@@ -32,7 +32,7 @@ def isMobileNumberUnique(mobile_number):
     query = """
         SELECT COUNT(*)
         FROM records
-        WHERE p_mob_num LIKE %s
+        WHERE phone LIKE %s
     """
     cur.execute(query, (f"%{mobile_number}%",))
     result = cur.fetchone()
@@ -45,7 +45,7 @@ def isTransactionIdUnique(transaction_id):
     query = """
             SELECT COUNT(*)
             FROM records
-            WHERE p_transaction_id = (%s)
+            WHERE transactionId = (%s)
             LIMIT 1;
     """
     cur.execute(query, (transaction_id,))
@@ -58,19 +58,19 @@ def isTransactionIdUnique(transaction_id):
 def createRecord(record):
     query = """
         INSERT INTO
-        records (p_uuid, p_name, p_mob_num, p_email, p_workplace, p_city, p_age, p_gender, p_transaction_id)
+        records (uuid, name, phone, email, workPlace, city, age, gender, transactionId)
         VALUES ((%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s));
     """
     cur.execute(query, (
-        record['p_uuid'],
-        record['p_name'],
-        record['p_mob_num'],
-        record['p_email'],
-        record['p_workplace'],
-        record['p_city'],
-        record['p_age'],
-        record['p_gender'],
-        record['p_transaction_id']
+        record['uuid'],
+        record['name'],
+        record['phone'],
+        record['email'],
+        record['workPlace'],
+        record['city'],
+        record['age'],
+        record['gender'],
+        record['transactionId']
     ))
     conn.commit()
 
@@ -103,9 +103,9 @@ def getRecords(password, access):
 # function to get a participant data using its uuid
 def getParticipantInfo(uuid):
     query = """
-       SELECT p_uuid, p_name, p_mob_num, p_email
+       SELECT uuid, name, phone, email
        FROM records
-       where p_uuid = (%s)
+       where uuid = (%s)
        LIMIT 1;
     """
     cur.execute(query, (uuid,))
@@ -113,12 +113,12 @@ def getParticipantInfo(uuid):
     return participant_record
 
 
-# function to set mail sent status (True or False)
-def setMailSent(uuid, status):
+# function to set mail sent status to true
+def setMailSentToTrue(uuid):
     query = """
         UPDATE records
-        SET p_mail_status = (%s)
-        WHERE p_uuid = (%s);
+        SET mailStatus = true
+        WHERE uuid = (%s);
     """
-    cur.execute(query, (status, uuid))
+    cur.execute(query, (uuid,))
     conn.commit()

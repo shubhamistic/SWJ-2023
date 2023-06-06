@@ -14,7 +14,7 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument("--disable-dev-shm-usage")
 prefs = {
-    'download.default_directory': './data/swj2023/QRs/',
+    'download.default_directory': './data/QRs/',
     'download.prompt_for_download': False,
     'download.directory_upgrade': True,
     'safebrowsing.enabled': False
@@ -35,7 +35,7 @@ def createQR(uuid):
     driver.get(f'http://127.0.0.1:5000/swj2023/create-client-qr?uuid={uuid}')
 
     png_file_name = f'qr_{uuid}.png'
-    png_file_path = f"./data/swj2023/QRs/{png_file_name}"
+    png_file_path = f"./data/QRs/{png_file_name}"
 
     # wait for at most 5 seconds for the file to get downloaded else return error.png file
     start_time = time.time()
