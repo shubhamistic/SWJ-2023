@@ -12,7 +12,7 @@ import teamsData from "./../data/team";
 const TeamCard = () => {
   return (
     <div className="container">
-      <h2 className="pt-5 text-center" style={{ fontSize: "2rem" }}>
+      <h2 className="pt-5 text-center noScroll" style={{ fontSize: "2rem" }}>
         <span style={{ color: "#000" }}>SWJ</span>Team
       </h2>
       <div className="card-collection">
@@ -29,7 +29,7 @@ const TeamCard = () => {
               />
             </div>
             <br />
-            <h5 className="text-center text-success">{res.name}</h5>
+            <h5 className="text-center noScroll text-success">{res.name}</h5>
             <hr />
             <p className="text-center text-success">{res.position}</p>
             <div className="team-desc">
@@ -72,7 +72,7 @@ const TeamCard = () => {
           </div>
         ))}
       </div>
-      <h2 className="pt-5 text-center" style={{ fontSize: "2rem" }}>
+      <h2 className="pt-5 text-center noScroll" style={{ fontSize: "2rem" }}>
         <span style={{ color: "#000" }}>SWJ</span>More Teams
       </h2>
       <div className="card-collection">
@@ -90,7 +90,7 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center text-success">{res.name}</h5>
+              <h5 className="text-center noScroll text-success">{res.name}</h5>
               <hr />
               <p className="text-center text-success">{res.position}</p>
               <div className="team-desc">

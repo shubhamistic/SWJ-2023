@@ -1,9 +1,10 @@
 import React from "react";
 import sponsorsData from "./../data/sponsors.js";
+import { Container } from "react-bootstrap";
 
 const Sponsor = () => {
   return (
-    <div className="main-sponsors">
+    <Container className="main-sponsors">
       {sponsorsData.map((res) => (
         <div className="nft" key={res.id}>
           <div className="main">
@@ -16,7 +17,7 @@ const Sponsor = () => {
           </div>
         </div>
       ))}
-    </div>
+    </Container>
   );
 };
 
