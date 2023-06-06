@@ -4,7 +4,7 @@ from googleapiclient.discovery import build
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from google.oauth2.credentials import Credentials
-from mailer.swj2023 import qrcode  # local library for handling QRs
+from mailers import qrcode
 import base64
 import os
 
@@ -17,9 +17,10 @@ client_secret_file = os.environ.get('GOOGLE_CLIENT_SECRET_PATH')
 
 # Set up credentials and authorize the API
 creds = None
+token_path = 'mailers/token.json'
 
-if os.path.exists('token.json'):
-    creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+if os.path.exists(token_path):
+    creds = Credentials.from_authorized_user_file(token_path, SCOPES)
 if not creds or not creds.valid:
     if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
@@ -27,7 +28,7 @@ if not creds or not creds.valid:
         flow = InstalledAppFlow.from_client_secrets_file(client_secret_file, SCOPES)
         creds = flow.run_local_server(port=5001)
     # Save the credentials for the next run
-    with open('token.json', 'w') as token:
+    with open(token_path, 'w') as token:
         token.write(creds.to_json())
 
 # Create a Gmail service
@@ -39,18 +40,18 @@ def sendMail(data):
 
     # Create a multipart message object
     message = MIMEMultipart('alternative')
-    message['to'] = data['p_email']
+    message['to'] = data['email']
     message['from'] = "startupweekendjaipur2023@gmail.com"
     message['subject'] = "Thank you for registering for Startup Weekend Jaipur 2023!"
 
     # generate the qr.png file and send it to mail
     qr_file_name = None
     try:
-        qr_file_name = qrcode.createQR(data['p_uuid'])
+        qr_file_name = qrcode.createQR(data['uuid'])
     except Exception:
         pass
     html = f"""
-        <p> Congratulations {data['p_name']} on your successful registration for Startup Weekend Jaipur 2023!
+        <p> Congratulations {data['name']} on your successful registration for Startup Weekend Jaipur 2023!
             We are excited to have you join us at the event. Please find the attached QR code with this email.
             Kindly make sure to have the QR code scanned at the event entrance to gain entry. We look forward
             to seeing you there!
