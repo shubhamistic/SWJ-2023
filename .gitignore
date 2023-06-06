@@ -33,5 +33,3 @@ backend-part/pyvenv.cfg
 backend-part/static/js/jquery-3.6.3.js
 backend-part/mailer
 backend-part/templates/clientQR.html
-
-.vscode
