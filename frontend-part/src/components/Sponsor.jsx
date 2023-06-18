@@ -4,6 +4,10 @@ import { Container } from "react-bootstrap";
 
 const Sponsor = () => {
   return (
+    <section>
+      <div className='bannerAbout'>
+        Our Sponsors
+        </div>
     <Container className="main-sponsors">
       {sponsorsData.map((res) => (
         <div className="nft" key={res.id}>
@@ -18,6 +22,7 @@ const Sponsor = () => {
         </div>
       ))}
     </Container>
+    </section>
   );
 };
 

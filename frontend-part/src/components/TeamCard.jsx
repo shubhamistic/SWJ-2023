@@ -12,6 +12,10 @@ import teamsData from "./../data/team";
 const TeamCard = () => {
   return (
     <div className="container">
+            <div className='bannerAbout'>
+        Our Sponsors
+        </div>
+
       <h2 className="pt-5 text-center noScroll" style={{ fontSize: "2rem" }}>
         <span style={{ color: "#000" }}></span>Convenors
       </h2>
