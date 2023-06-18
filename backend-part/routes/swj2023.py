@@ -5,23 +5,23 @@ from datetime import datetime
 import json
 import uuid
 import pandas as pd
-from models import database
+from models import db_swj2023 as database
 from mailers import mailer
 
 # Create a swj2023 route
 swj2023 = Blueprint('swj2023', __name__)
 
 """
-LIST OF ROUTES:
--> /
--> /admin
--> /read
--> /download
--> /create
--> /event/<uuid>
--> /scan
--> /create-client-qr
--> /file/QR/<qr_file_name>
+ROUTES:
+    /
+    /admin
+    /read
+    /download
+    /create
+    /event/<uuid>
+    /scan
+    /create-client-qr
+    /file/QR/<qr_file_name>
 """
 
 
@@ -130,9 +130,10 @@ async def create():
         database.createRecord(record)
 
         # send the mail to the participant
-        if mailer.sendMail(record):
-            # update to the database that mail has been sent
-            database.setMailSentToTrue(uuid_)
+        mail_response = mailer.sendMail(record)
+        if mail_response:
+            # set the mail status to delivered
+            database.setMailSentToTrue(mail_response, uuid_)
 
         return {
             "message": "Data Successfully Inserted!",

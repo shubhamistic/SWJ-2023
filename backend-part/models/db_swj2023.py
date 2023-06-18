@@ -113,12 +113,22 @@ def getParticipantInfo(uuid):
     return participant_record
 
 
-# function to set mail sent status to true
-def setMailSentToTrue(uuid):
+# function to set mail sent status to true and store mail id
+def setMailSentToTrue(mail_id, uuid):
+    # set mail status to delivered
     query = """
         UPDATE records
         SET mailStatus = true
         WHERE uuid = (%s);
     """
     cur.execute(query, (uuid,))
+
+    # store mail id in database
+    query = """
+        INSERT INTO
+        mail_records (mail_id, uuid)
+        VALUES ((%s), (%s));
+    """
+    cur.execute(query, (mail_id, uuid))
+
     conn.commit()
