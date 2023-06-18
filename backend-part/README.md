@@ -75,9 +75,14 @@
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
   );
   
-  CREATE TABLE auth(
+  CREATE TABLE auth (
     pass TEXT NOT NULL,
     access TEXT NOT NULL
+  );
+  
+  CREATE TABLE mail_records (
+    mail_id VARCHAR(36) PRIMARY KEY,
+    uuid TEXT NOT NULL
   );
   
   COMMIT;
