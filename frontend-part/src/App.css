@@ -2,6 +2,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important;
 }
 .card-collection {
   display: flex;
@@ -185,9 +186,36 @@
 .heroContainer {
   height: 90vh;
   width: 100vw;
+  background-image: url('./assets/IMG_5753.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  flex-direction: column;
+}
+.swjTitle{
+  margin-top: 18vw;
+  margin-left: 2vw;
+  color: white;
+  font-size: 15vh;
+  font-weight: bolder;
+}
+
+@media (max-width: 768px) {
+  /* Adjust font size for smaller screens */
+  .swjTitle {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust font size for even smaller screens */
+  .swjTitle {
+    font-size: 6vw;
+  }
 }
 
 
@@ -233,7 +261,7 @@
   height: 90vh;
   width: 100%;
   z-index: 1;
-  margin: 0; 
+  margin: 0;
   background-color: white;
   display: flex;
 
@@ -350,6 +378,11 @@ h1{
     }
 
 }
+.homePageStuff{
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
 
 
 
