@@ -8,10 +8,10 @@ import { LinkContainer } from "react-router-bootstrap";
 
 function NavBar() {
   return (
-    <Navbar bg="white" expand="lg" className="mb-3">
+    <Navbar expand="lg" className="mb-3">
       <Container fluid>
         <Navbar.Brand href="/">
-            <img src={NavLogo} alt="SWJ'23-Logo" width={"100px"} />
+            <img src={NavLogo} alt="SWJ'23-Logo" width={"120px"} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
         <Navbar.Offcanvas
@@ -26,12 +26,12 @@ function NavBar() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <LinkContainer to='/'><Nav.Link>Home</Nav.Link></LinkContainer>
-              <LinkContainer to="/about"><Nav.Link href="/about">About</Nav.Link></LinkContainer>
-              <LinkContainer to="/teams"><Nav.Link href="/teams">Teams</Nav.Link></LinkContainer>
-              <LinkContainer to="/sponsors"><Nav.Link href="/sponsors">Sponsors</Nav.Link></LinkContainer>
-              <LinkContainer to="/teams"><Nav.Link>SWJ</Nav.Link></LinkContainer>
-              <Button variant="outline-success">Register</Button>
+              <LinkContainer to='/'><Nav.Link className="navLink">Home</Nav.Link></LinkContainer>
+              <LinkContainer to="/about"><Nav.Link href="/about" className="navLink">About</Nav.Link></LinkContainer>
+              <LinkContainer to="/teams"><Nav.Link href="/teams" className="navLink">Teams</Nav.Link></LinkContainer>
+              <LinkContainer to="/sponsors"><Nav.Link href="/sponsors" className="navLink">Sponsors</Nav.Link></LinkContainer>
+              <LinkContainer to="/teams"><Nav.Link className="navLink">SWJ</Nav.Link></LinkContainer>
+              <Button className="registerButton">Register</Button>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

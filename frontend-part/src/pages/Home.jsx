@@ -7,7 +7,12 @@ const Home = () => {
 <section className='hero'>
 <div className='heroContainer'>
         <div className='swjTitle'>
-        A three-day collaborative and creative workshop
+        Startup Weekend Jaipur
+        </div>
+        <div className='heroText'>
+        <div >
+        a three-day collaborative and creative workshop
+        </div>
         </div>
         </div>
         <div className='homePageStuff'>

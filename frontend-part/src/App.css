@@ -186,15 +186,16 @@
 .heroContainer {
   height: 90vh;
   width: 100vw;
-  background-image: url('./assets/IMG_5753.jpg');
+  background-image: url('./assets/IMG_5786.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   overflow-x: hidden;
   flex-direction: column;
+  text-align: left;
 }
 .swjTitle{
   margin-top: 18vw;
@@ -202,23 +203,38 @@
   margin-right: 2vw;
   padding-left: 1vw;
   color: white;
-  font-size: 15vh;
+  font-size: 6rem;
   font-weight: bolder;
+  display: flex;
+  align-items: left;
+  -webkit-text-stroke: 2px black;
+  text-align: left;
+  overflow-x: hidden;
+
+}
+@media (max-width: 439px) {
+  .swjTitle {
+    margin-top: 10vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 4rem;
+    -webkit-text-stroke: 1px black;
+  }
+}
+.heroText{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  padding-left: 1vw;
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  display: flex;
+  align-items: left;
+  -webkit-text-stroke: 1.2px black;
+  text-align: left;
+  display: flex;
+  justify-content: center;
   
-}
-
-@media (max-width: 768px) {
-  /* Adjust font size for smaller screens */
-  .swjTitle {
-    font-size: 7vw;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Adjust font size for even smaller screens */
-  .swjTitle {
-    font-size: 6vw;
-  }
 }
 
 
@@ -392,19 +408,56 @@ h1{
   color: #EAB43E;
 }
 .bannerAbout{
-  height: 20vh;
-  background-image: url('./assets/IMG_9554.jpg');
+  height:10rem;
+  background-image: url('./assets/team.jpeg');
   background-size:cover ;
   background-repeat: no-repeat;
   background-position: center;
-  font-size: 10vh;
+  font-size: 4rem;
   color: white;
   font-weight: bolder;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1.5vh;
+  padding-top: 2rem;
 }
+@media (max-width: 429px) {
+  .bannerAbout {
+    height: 6rem;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+}
+.registerButton{
+    border-color: #EAB43E !important;
+    background-color: transparent !important;
+    color: #EAB43E !important;
+
+}
+.registerButton:hover{
+  background-color: #EAB43E !important;
+  color: black !important;
+}
+.navLink{
+  font-size: 3.5vh !important;
+  margin-left: 0.7vw;
+  font-weight: bolder !important;
+  
+}
+.about-text{
+  font-size: large;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+
+}
+
 
 
 
