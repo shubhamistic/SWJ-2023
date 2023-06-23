@@ -1,9 +1,10 @@
 /* Teams Page Start */
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
 }
+
 .card-collection {
   display: flex;
   justify-content: center;
@@ -31,7 +32,8 @@
   display: flex;
   justify-content: center;
 }
-.noScroll{
+
+.noScroll {
   overflow: hidden !important;
 }
 
@@ -61,7 +63,7 @@
 .nft .main .tokenImage {
   border-radius: 0.5rem;
   width: 100%;
-  height:200px;  
+  height: 200px;
   object-fit: cover;
 }
 
@@ -139,20 +141,20 @@
 
 .main-sponsors {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 15px;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   justify-items: center;
 }
 
 .nft {
   user-select: none;
-  width: 250px; 
+  width: 250px;
   height: 320px;
   margin: 1rem;
   border: 1px solid #EAB43E;
-  box-shadow: 0 3px 3px 3px #EAB43E;
+  /* box-shadow: 0 3px 3px 3px #EAB43E; */
   border-radius: 0.7rem;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -162,31 +164,32 @@
 
 @media (max-width: 1024px) {
   .main-sponsors {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
   .main-sponsors {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   .main-sponsors {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 
-*{
-  overflow-x:hidden; 
+* {
+  overflow-x: hidden;
 }
 
 .heroContainer {
   height: 90vh;
   width: 100vw;
-  background-image: url('./assets/IMG_5786.jpg');
+  background-image: url('./assets/banner.png');
+  /* background-color: #EAB43E; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -197,7 +200,8 @@
   flex-direction: column;
   text-align: left;
 }
-.swjTitle{
+
+.swjTitle {
   margin-top: 18vw;
   margin-left: 2vw;
   margin-right: 2vw;
@@ -212,6 +216,7 @@
   overflow-x: hidden;
 
 }
+
 @media (max-width: 439px) {
   .swjTitle {
     margin-top: 10vw;
@@ -221,7 +226,8 @@
     -webkit-text-stroke: 1px black;
   }
 }
-.heroText{
+
+.heroText {
   margin-left: 2vw;
   margin-right: 2vw;
   padding-left: 1vw;
@@ -234,7 +240,7 @@
   text-align: left;
   display: flex;
   justify-content: center;
-  
+
 }
 
 
@@ -246,36 +252,39 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  
+
 }
 
 .heroTitle {
   z-index: 1;
   height: 40vh;
   font-weight: 600;
-  font-size:5.5vw;
+  font-size: 5.5vw;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
 }
 
 
-.footerStyle{
+.footerStyle {
   z-index: 1;
   background-color: white;
 
 }
-.footerTitles{
+
+.footerTitles {
   overflow-y: hidden;
 }
+
 /* Sponsors Page End */
 
-.hero{
-  margin: 0 !important ;
+.hero {
+  margin: 0 !important;
   padding: 0 !important;
   width: 100%;
 
 }
+
 .first {
   height: 90vh;
   width: 100%;
@@ -286,49 +295,59 @@
 
 
 }
-.three{
+
+.three {
   height: 90vh;
   width: 100%;
   z-index: 1;
-  margin: 0; /* Remove the margin property */
+  margin: 0;
+  /* Remove the margin property */
   background-color: white;
   display: flex;
 }
-.text1{
+
+.text1 {
   width: 60%;
   display: flex;
   justify-content: space-around;
-  
-  
+
+
 }
-.heroBox{
+
+.heroBox {
   margin-top: 10vh;
   width: 90%;
- 
+
 }
-.heroBoxTitle{
- overflow: hidden;
-}
-h1{
+
+.heroBoxTitle {
   overflow: hidden;
-  
 }
-.sponsorTitle{
+
+h1 {
+  overflow: hidden;
+
+}
+
+.sponsorTitle {
   color: #EAB43E;
 }
-.img1{
+
+.img1 {
   width: 40%;
   background-image: url("./assets/Celebratory_Marigold.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.text2{
+
+.text2 {
   width: 60%;
   display: flex;
   justify-content: space-around;
 }
-.img2{
+
+.img2 {
   width: 40%;
   background-image: url("./assets/Diversity_Marigold.svg");
   background-repeat: no-repeat;
@@ -336,12 +355,13 @@ h1{
   background-position: center;
 }
 
-.text3{
+.text3 {
   width: 60%;
   display: flex;
   justify-content: space-around;
 }
-.img3{
+
+.img3 {
   width: 40%;
   background-image: url("./assets/Kids_Marigold.svg");
   background-repeat: no-repeat;
@@ -352,65 +372,76 @@ h1{
 
 /* Add a specific selector for the div element with class "first" */
 
-.custom{
-  margin: 0 ;
+.custom {
+  margin: 0;
 }
+
 @media (max-width: 500px) {
-  .text1{
-    height: 100%;
-    width: 100%;
-  }
-  .text2{
-    height: 100%;
-    width: 100%;
-  }
-  .text3{
+  .text1 {
     height: 100%;
     width: 100%;
   }
 
-    .first{
-      flex-direction: column;
-      height: 100vh;
-      width: 100vw;
-    }
-    .three{
-      flex-direction: column-reverse;
-      height: 100vh;
-      width: 100vw;
-    }
-    .img1{
-      height: 100%;
-      width: 100%;
-      background-size: contain;
-    
-    }
-    .img2{
-      height: 100%;
-      width: 100%;
-      background-size: contain;
-    }
-    .img3{
-      height: 100%;
-      width: 100%;
-      background-size: contain;
-    }
+  .text2 {
+    height: 100%;
+    width: 100%;
+  }
+
+  .text3 {
+    height: 100%;
+    width: 100%;
+  }
+
+  .first {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .three {
+    flex-direction: column-reverse;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .img1 {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+
+  }
+
+  .img2 {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+  }
+
+  .img3 {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+  }
 
 }
-.homePageStuff{
+
+.homePageStuff {
   margin-left: 4vw;
   margin-right: 4vw;
 }
-.colour{
+
+.colour {
   color: #EAB43E;
 }
-.backgroundColour{
+
+.backgroundColour {
   color: #EAB43E;
 }
-.bannerAbout{
-  height:10rem;
+
+.bannerAbout {
+  height: 10rem;
   background-image: url('./assets/team.jpeg');
-  background-size:cover ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   font-size: 4rem;
@@ -421,6 +452,7 @@ h1{
   align-items: center;
   padding-top: 2rem;
 }
+
 @media (max-width: 429px) {
   .bannerAbout {
     height: 6rem;
@@ -428,28 +460,31 @@ h1{
     padding-top: 1rem;
   }
 }
-.navbar{
+
+.navbar {
   display: flex;
   justify-content: space-around;
   background-color: transparent;
 }
-.registerButton{
-    border-color: #EAB43E !important;
-    background-color: transparent !important;
-    color: #EAB43E !important;
+
+.registerButton {
+  border-color: #EAB43E !important;
+  background-color: transparent !important;
+  color: #EAB43E !important;
 
 }
-.registerButton:hover{
+
+.registerButton:hover {
   background-color: #EAB43E !important;
   color: black !important;
 }
-.navLink{
-  font-size: 3.5vh !important;
-  margin-left: 0.7vw;
-  font-weight: bolder !important;
-  
+
+.navLink {
+  font-size: 1.4rem !important;
+
 }
-.about-text{
+
+.about-text {
   font-size: large;
   margin-left: 6vw;
   margin-right: 6vw;
@@ -458,8 +493,106 @@ h1{
 
 }
 
+/* Register Button Navbar Start */
+.custom-btn {
+  margin: 0 0 0 20px;
+  width: 130px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+}
 
+.btn-register-nav {
+  background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
 
+.btn-register-nav span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
+.btn-register-nav:before,
+.btn-register-nav:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: rgba(251, 75, 2, 1);
+  box-shadow:
+    -7px -7px 20px 0px rgba(255, 255, 255, .9),
+    -4px -4px 5px 0px rgba(255, 255, 255, .9),
+    7px 7px 20px 0px rgba(0, 0, 0, .2),
+    4px 4px 5px 0px rgba(0, 0, 0, .3);
+  transition: all 0.3s ease;
+}
 
+.btn-register-nav:before {
+  height: 0%;
+  width: 2px;
+}
 
+.btn-register-nav:after {
+  width: 0%;
+  height: 2px;
+}
+
+.btn-register-nav:hover {
+  color: rgba(251, 75, 2, 1);
+  background: transparent;
+}
+
+.btn-register-nav:hover:before {
+  height: 100%;
+}
+
+.btn-register-nav:hover:after {
+  width: 100%;
+}
+
+.btn-register-nav span:before,
+.btn-register-nav span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: rgba(251, 75, 2, 1);
+  box-shadow:
+    -7px -7px 20px 0px rgba(255, 255, 255, .9),
+    -4px -4px 5px 0px rgba(255, 255, 255, .9),
+    7px 7px 20px 0px rgba(0, 0, 0, .2),
+    4px 4px 5px 0px rgba(0, 0, 0, .3);
+  transition: all 0.3s ease;
+}
+
+.btn-register-nav span:before {
+  width: 2px;
+  height: 0%;
+}
+
+.btn-register-nav span:after {
+  height: 2px;
+  width: 0%;
+}
+
+.btn-register-nav span:hover:before {
+  height: 100%;
+}
+
+.btn-register-nav span:hover:after {
+  width: 100%;
+}
+
+/* Register Button Navbar End */

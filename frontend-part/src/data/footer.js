@@ -2,14 +2,14 @@ let footerData = [
   // contact data; 1st array
   [
     {
-      name: "Rajveer",
+      name: "Rajveer Sanghavi",
       phone: "1234567890",
       email: "rajveer@gmail.com",
     },
     {
-      name: "Bassi",
+      name: "Atul Raj Sharma",
       phone: "0987654321",
-      email: "bassi@gmail.com",
+      email: "atul@gmail.com",
     },
   ],
   // address data: 2nd array
@@ -24,16 +24,12 @@ let footerData = [
   // links data: 3rd array
   [
     {
-      text: "Manipal Unviersity Jaipur",
+      text: "Manipal University Jaipur",
       link: "https://jaipur.manipal.edu",
     },
     {
-      text: "SWJ",
+      text: "Startup Weekend Jaipur",
       link: "https://",
-    },
-    {
-      text: "Something",
-      link: "https://jaipur.manipal.edu",
     },
   ],
   // social media links data: 4th array

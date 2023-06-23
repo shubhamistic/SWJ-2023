@@ -5,7 +5,7 @@ const Teams = () => {
   return (
     <div>
        <div className='bannerAbout'>
-        Our Sponsors
+        Teams
         </div>
         <TeamCard />
     </div>

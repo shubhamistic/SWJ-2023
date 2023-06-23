@@ -14,7 +14,7 @@ import footerData from "./../data/footer";
 
 const Footer = () => {
   return (
-    <div className="border-top border-success footerStyle" style={{ borderTop: "2px solid #000"}}>
+    <div className="border-top border-warning footerStyle" style={{ borderTop: "2px solid #000"}}>
       <footer className="text-center text-lg-start text-dark">
         <div className="container p-4">
           <div className="row my-4">
@@ -168,10 +168,10 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className="text-center p-3 bg-#EAB53D border-top border-success"
+          className="text-center p-3 bg-#EAB53D border-top border-warning"
         >
-          © 2023 <span style={{ color: "#000" }}>StartUp Weekend Jaipur</span>
-          @ Manipal University Jaipur
+          © 2023 <span style={{ color: "#000" }}>StartUp Weekend Jaipur </span>
+          @ Manipal University
         </div>
       </footer>
     </div>

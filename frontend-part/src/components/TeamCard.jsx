@@ -32,9 +32,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -94,9 +94,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -156,9 +156,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -218,9 +218,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -280,9 +280,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -342,9 +342,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -404,9 +404,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -466,9 +466,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -528,9 +528,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -590,9 +590,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -652,9 +652,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -714,9 +714,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -776,9 +776,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">
@@ -838,9 +838,9 @@ const TeamCard = () => {
                 />
               </div>
               <br />
-              <h5 className="text-center noScroll text-warning">{res.name}</h5>
+              <h5 className="text-center noScroll ">{res.name}</h5>
               <hr />
-              <p className="text-center text-warning">{res.position}</p>
+              <p className="text-center ">{res.position}</p>
               <div className="team-desc">
                 {res.facebook !== "" ? (
                   <a href={res.facebook} target="_blank" rel="noreferrer">

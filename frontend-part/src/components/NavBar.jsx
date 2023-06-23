@@ -8,10 +8,10 @@ import { LinkContainer } from "react-router-bootstrap";
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="mb-3">
+    <Navbar expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">
-            <img src={NavLogo} alt="SWJ'23-Logo" width={"120px"} />
+          <img src={NavLogo} alt="SWJ'23-Logo" width={"120px"} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
         <Navbar.Offcanvas
@@ -30,8 +30,8 @@ function NavBar() {
               <LinkContainer to="/about"><Nav.Link href="/about" className="navLink">About</Nav.Link></LinkContainer>
               <LinkContainer to="/teams"><Nav.Link href="/teams" className="navLink">Teams</Nav.Link></LinkContainer>
               <LinkContainer to="/sponsors"><Nav.Link href="/sponsors" className="navLink">Sponsors</Nav.Link></LinkContainer>
-              <LinkContainer to="/teams"><Nav.Link className="navLink">SWJ</Nav.Link></LinkContainer>
-              <Button className="registerButton">Register</Button>
+              {/* <LinkContainer to="/teams"><Nav.Link className="navLink">SWJ</Nav.Link></LinkContainer> */}
+              <button class="custom-btn btn-register-nav">REGISTER</button>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

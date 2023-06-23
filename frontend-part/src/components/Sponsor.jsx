@@ -6,9 +6,9 @@ const Sponsor = () => {
   return (
     <section>
       <div className='bannerAbout'>
-        Our Sponsors
+        Sponsors
         </div>
-    <Container className="main-sponsors">
+    <Container className="main-sponsors mt-5 mb-5">
       {sponsorsData.map((res) => (
         <div className="nft" key={res.id}>
           <div className="main">
