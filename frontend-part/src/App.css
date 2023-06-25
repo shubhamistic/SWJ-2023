@@ -64,7 +64,7 @@
   border-radius: 0.5rem;
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .nft .main .description {
@@ -153,7 +153,6 @@
   width: 250px;
   height: 320px;
   margin: 1rem;
-  border: 1px solid #EAB43E;
   /* box-shadow: 0 3px 3px 3px #EAB43E; */
   border-radius: 0.7rem;
   backdrop-filter: blur(7px);
@@ -185,6 +184,13 @@
   overflow-x: hidden;
 }
 
+/* Home Page */
+
+.carousel{
+  height: 80vh;
+  background-color: black;
+}
+
 .heroContainer {
   height: 90vh;
   width: 100vw;
@@ -201,21 +207,7 @@
   text-align: left;
 }
 
-.swjTitle {
-  margin-top: 18vw;
-  margin-left: 2vw;
-  margin-right: 2vw;
-  padding-left: 1vw;
-  color: white;
-  font-size: 6rem;
-  font-weight: bolder;
-  display: flex;
-  align-items: left;
-  -webkit-text-stroke: 2px black;
-  text-align: left;
-  overflow-x: hidden;
 
-}
 
 @media (max-width: 439px) {
   .swjTitle {
@@ -227,21 +219,7 @@
   }
 }
 
-.heroText {
-  margin-left: 2vw;
-  margin-right: 2vw;
-  padding-left: 1vw;
-  color: white;
-  font-size: 2rem;
-  font-weight: bolder;
-  display: flex;
-  align-items: left;
-  -webkit-text-stroke: 1.2px black;
-  text-align: left;
-  display: flex;
-  justify-content: center;
 
-}
 
 
 .heroImage {
@@ -281,7 +259,8 @@
 .hero {
   margin: 0 !important;
   padding: 0 !important;
-  width: 100%;
+  width: 100% !important;
+  padding-left: 0 !important;
 
 }
 
@@ -290,7 +269,7 @@
   width: 100%;
   z-index: 1;
   margin: 0;
-  background-color: white;
+  background-color: #E5E5E5;
   display: flex;
 
 
@@ -302,7 +281,6 @@
   z-index: 1;
   margin: 0;
   /* Remove the margin property */
-  background-color: white;
   display: flex;
 }
 
@@ -310,9 +288,30 @@
   width: 60%;
   display: flex;
   justify-content: space-around;
+  
+
 
 
 }
+.text1 p{
+  margin:0;
+  text-align:justify;
+  font-size:2vw;
+}
+.text3 p{
+  margin:0;
+  text-align:justify;
+  font-size:2vw;
+
+  
+}
+.text2 p{
+  margin:0;
+  text-align:justify;
+  font-size:2vw;
+
+}
+
 
 .heroBox {
   margin-top: 10vh;
@@ -322,6 +321,10 @@
 
 .heroBoxTitle {
   overflow: hidden;
+}
+.heroBoxTitle h1 {
+  overflow: hidden;
+  font-size:5vw;
 }
 
 h1 {
@@ -339,12 +342,14 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
 }
 
 .text2 {
   width: 60%;
   display: flex;
   justify-content: space-around;
+  
 }
 
 .img2 {
@@ -353,6 +358,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
 }
 
 .text3 {
@@ -367,6 +373,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
 }
 
 
@@ -376,20 +383,25 @@ h1 {
   margin: 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
   .text1 {
     height: 100%;
     width: 100%;
+    justify-content: space-between;
   }
 
   .text2 {
     height: 100%;
     width: 100%;
+    justify-content: space-between;
+
   }
 
   .text3 {
     height: 100%;
     width: 100%;
+    justify-content: space-between;
+
   }
 
   .first {
@@ -422,12 +434,22 @@ h1 {
     width: 100%;
     background-size: contain;
   }
+  .heroBox p{
+    font-size: 4vw;
+    padding: 10px;
+    
+  }
+  .heroBox h1{
+    font-size: 9vw;
+    padding: 10px;
+  }
 
 }
 
 .homePageStuff {
   margin-left: 4vw;
   margin-right: 4vw;
+  width: 90%;
 }
 
 .colour {
@@ -439,7 +461,7 @@ h1 {
 }
 
 .bannerAbout {
-  height: 10rem;
+  height: 35vh;
   background-image: url('./assets/team.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -451,6 +473,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding-top: 2rem;
+  overflow-y: hidden;
 }
 
 @media (max-width: 429px) {
@@ -460,6 +483,17 @@ h1 {
     padding-top: 1rem;
   }
 }
+
+@media (max-width:1200px) {
+  .bannerAbout {
+    height: 20vh;
+    font-size: 5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+
+
 
 .navbar {
   display: flex;
@@ -596,3 +630,10 @@ h1 {
 }
 
 /* Register Button Navbar End */
+
+
+/*Particle*/
+#tsparticles {
+  width: 100%;
+  height: calc(100vh-100px);
+}
