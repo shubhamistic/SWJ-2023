@@ -19,8 +19,8 @@ const Particle = () => {
       loaded={particlesLoaded}
       options={{
         fullScreen: {
-          enable: false,
-          zIndex: -10,
+          enable: true,
+          zIndex: -5,
         },
         particles: {
           number: {
@@ -31,7 +31,7 @@ const Particle = () => {
             },
           },
           color: {
-            value: '#000000',
+            value: ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"],
           },
           shape: {
             type: 'circle',
@@ -47,7 +47,7 @@ const Particle = () => {
             },
           },
           size: {
-            value: 3,
+            value: 8,
             random: true,
             anim: {
               enable: false,

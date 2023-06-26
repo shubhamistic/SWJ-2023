@@ -24,6 +24,18 @@ const teamData = [
       "https://images.prismic.io/swj23/8215f816-4c27-4b29-a2c4-5cd10d611563_Vedant_Nemade_Sponsorship_and_Finance_Lead.jpg?auto=compress,format&w=500&h=500",
   },
   {
+    name: "Nayonika Sharma",
+    position: "Lead",
+    team: "Social Media",
+    facebook: "",
+    twitter: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/nayonika-sharma-809626242",
+    instagram: "https://instagram.com/nayonikaaaa?igshid=MmIzYWVlNDQ5Yg==",
+    image:
+      "https://images.prismic.io/swj23/65813c3a-c3d2-48a2-b56c-846792e68087_Nayonika+Sharma_Social+Media_Lead.jpg?auto=compress,format&w=500&h=500",
+  },
+  {
     name: "Aastha Tandon",
     position: "Co-Lead",
     team: "Social Media",
@@ -44,6 +56,55 @@ const teamData = [
     github: "https://github.com/devagra28",
     linkedin: "https://www.linkedin.com/in/dev-agrawal28",
     instagram: "https://instagram.com/dev_agrawal28?igshid=MzNlNGNkZWQ4Mg==",
+    image:
+      "",
+  },
+ 
+  {
+    name: "Samarth Bagga",
+    position: "Co-Lead",
+    team: "Web Development",
+    facebook: "",
+    twitter: "",
+    github: "",
+    linkedin: "",
+    instagram: "",
+    image:
+      "",
+  },
+  {
+    name: "Ansh Srivastava",
+    position: "Co-Lead",
+    team: "Sponsorship and Finance",
+    facebook: "https://www.facebook.com/ansh.srivastava.752",
+    twitter: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/ansh-srivastava-60a082193/",
+    instagram: "https://www.instagram.com/ansh_srivastava_7755/",
+    image:
+      "https://images.prismic.io/swj23/f82c0d36-ff84-40ad-b836-18fe1507796a_ANSH_SRIVASTAVA%28co-lead+for+sponsorship%29.jpg?auto=compress,format&w=500&h=500",
+  },
+  {
+    name: "Divya Srivastva",
+    position: "Lead",
+    team: "Event Production",
+    facebook: "",
+    twitter: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/divya-srivastva",
+    instagram: "https://instagram.com/_divyaaa_14?igshid=MzNlNGNkZWQ4Mg==",
+    image:
+      "",
+  },
+  {
+    name: "Manya Goel",
+    position: "Co-Lead",
+    team: "Content",
+    facebook: "https://www.facebook.com/profile.php?id=100074625557118&mibextid=ZbWKwL",
+    twitter: "",
+    github: "",
+    linkedin: "https://www.linkedin.com/in/manya-goel-8a6335222",
+    instagram: "https://instagram.com/manya_3110?igshid=MzNlNGNkZWQ4Mg==",
     image:
       "",
   },
@@ -226,66 +287,6 @@ const teamData = [
     instagram: "",
     image:
       "https://images.prismic.io/swj23/ab919c41-855c-4088-ac60-f992f9206633_Bhavya+Bhardwaj_Coverage_Media_Colead_.jpg?auto=compress,format&w=500&h=500",
-  },
-  {
-    name: "Nayonika Sharma",
-    position: "Lead",
-    team: "Social Media",
-    facebook: "",
-    twitter: "",
-    github: "",
-    linkedin: "https://www.linkedin.com/in/nayonika-sharma-809626242",
-    instagram: "https://instagram.com/nayonikaaaa?igshid=MmIzYWVlNDQ5Yg==",
-    image:
-      "https://images.prismic.io/swj23/65813c3a-c3d2-48a2-b56c-846792e68087_Nayonika+Sharma_Social+Media_Lead.jpg?auto=compress,format&w=500&h=500",
-  },
-  {
-    name: "Samarth Bagga",
-    position: "Co-Lead",
-    team: "Web Development",
-    facebook: "",
-    twitter: "",
-    github: "",
-    linkedin: "",
-    instagram: "",
-    image:
-      "",
-  },
-  {
-    name: "Ansh Srivastava",
-    position: "Co-Lead",
-    team: "Sponsorship and Finance",
-    facebook: "https://www.facebook.com/ansh.srivastava.752",
-    twitter: "",
-    github: "",
-    linkedin: "https://www.linkedin.com/in/ansh-srivastava-60a082193/",
-    instagram: "https://www.instagram.com/ansh_srivastava_7755/",
-    image:
-      "https://images.prismic.io/swj23/f82c0d36-ff84-40ad-b836-18fe1507796a_ANSH_SRIVASTAVA%28co-lead+for+sponsorship%29.jpg?auto=compress,format&w=500&h=500",
-  },
-  {
-    name: "Divya Srivastva",
-    position: "Lead",
-    team: "Event Production",
-    facebook: "",
-    twitter: "",
-    github: "",
-    linkedin: "https://www.linkedin.com/in/divya-srivastva",
-    instagram: "https://instagram.com/_divyaaa_14?igshid=MzNlNGNkZWQ4Mg==",
-    image:
-      "",
-  },
-  {
-    name: "Manya Goel",
-    position: "Co-Lead",
-    team: "Content",
-    facebook: "https://www.facebook.com/profile.php?id=100074625557118&mibextid=ZbWKwL",
-    twitter: "",
-    github: "",
-    linkedin: "https://www.linkedin.com/in/manya-goel-8a6335222",
-    instagram: "https://instagram.com/manya_3110?igshid=MzNlNGNkZWQ4Mg==",
-    image:
-      "",
   },
   {
     name: "Anushka Saxena",

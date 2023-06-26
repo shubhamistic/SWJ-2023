@@ -261,7 +261,6 @@
   padding: 0 !important;
   width: 100% !important;
   padding-left: 0 !important;
-
 }
 
 .first {
@@ -447,9 +446,9 @@ h1 {
 }
 
 .homePageStuff {
-  margin-left: 4vw;
   margin-right: 4vw;
-  width: 90%;
+  margin-top: 3vh;
+  width: 100%;
 }
 
 .colour {
@@ -634,6 +633,14 @@ h1 {
 
 /*Particle*/
 #tsparticles {
+  position: absolute;
   width: 100%;
-  height: calc(100vh-100px);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: -5;
+  
+}
+.homePageInnerStuff{
+  width: 100%;
+
 }

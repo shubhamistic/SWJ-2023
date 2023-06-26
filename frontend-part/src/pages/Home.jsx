@@ -16,8 +16,6 @@ const Home = () => {
         <Particle/>
       <div className='homePageStuff'>
         <div className='homePageInnerStuff'>
-        
- 
           <div className='first'>
             <div className='img1'>
             </div>
