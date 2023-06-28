@@ -191,6 +191,128 @@
   background-color: black;
 }
 
+.common {
+  height: 90vh ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.homeWrapper{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media(max-width:400px){
+  .homePagePara{
+   font-size: 0.5rem !important;
+  }
+ }
+ 
+@media(max-width:670px){
+ .homePageHeading{
+  font-size: 5rem !important;
+ }
+ .homePagePara{
+  font-size: 1rem !important;
+ }
+}
+@media (max-width: 900px){
+  .homePageText{
+    width: 80% !important;
+  }
+  .homePageImage1{
+    width: 80% !important;
+
+  }
+  .homePageImage2{
+    width: 80% !important;
+
+  }
+  .homePageImage3{
+    width: 80% !important;
+
+  }
+    .homeWrapper{
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    .homePageText{
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+
+    }
+}
+.first{
+  background-image: url("./assets/image2.jpg");
+  border-top: white 1px solid;
+  width: 100%;  
+}
+.second{
+  background-image: url("./assets/image3.jpg");
+  border-top: white 1px solid;
+  width: 100% ;
+
+}
+.third{
+  background-image: url("./assets/image4.jpg");
+  border-top: white 1px solid;
+  width: 100% ;
+
+}
+.homePageText  {
+  width: 50%;
+  height: 70%;
+
+}
+.homePageHeading{
+  color: white;
+  font-weight: bold;
+  font-size: 6rem;
+}
+.homePagePara{
+  color: white;
+  font-size: 1.3rem;
+
+}
+.homePageImage1{
+  background-image: url("./assets/IMG_9539.jpg");
+  width: 45%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.homePageImage2{
+  background-image: url("./assets/IMG_5726.jpg");
+  width: 45%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.homePageImage3{
+  background-image: url("./assets/team.jpg");
+  width: 45%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+
 .heroContainer {
   height: 90vh;
   width: 100vw;
@@ -261,26 +383,6 @@
   padding: 0 !important;
   width: 100% !important;
   padding-left: 0 !important;
-}
-
-.first {
-  height: 90vh;
-  width: 100%;
-  z-index: 1;
-  margin: 0;
-  background-color: #E5E5E5;
-  display: flex;
-
-
-}
-
-.three {
-  height: 90vh;
-  width: 100%;
-  z-index: 1;
-  margin: 0;
-  /* Remove the margin property */
-  display: flex;
 }
 
 .text1 {
@@ -403,11 +505,6 @@ h1 {
 
   }
 
-  .first {
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-  }
 
   .three {
     flex-direction: column-reverse;
@@ -471,7 +568,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  justify-content: center; 
   overflow-y: hidden;
 }
 
@@ -479,7 +576,6 @@ h1 {
   .bannerAbout {
     height: 6rem;
     font-size: 2.5rem;
-    padding-top: 1rem;
   }
 }
 
