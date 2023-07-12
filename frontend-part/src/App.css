@@ -623,10 +623,29 @@ h1 {
   margin-bottom: 5vh;
 }
 
+
 .theBox{
   display: flex;
   border: 1px solid black;
   height: 80vh;
+}
+@media (max-width: 768px) {
+    .theBox{
+      flex-direction: column;
+      height: 100vh;
+    }
+    .dropdownMenu{
+      height: 12rem;
+    }
+    .smallBox{
+      height: 100vh;
+      
+    }
+}
+
+.aboutPara{
+  text-align: left;
+  margin: 10px 0px 10px 10px;
 }
 
 
@@ -634,10 +653,21 @@ h1 {
   display: flex;
   flex-direction: column;
 }
-.aboutButtons{
-  height: 4rem;
-  width: 14rem;
+.aboutButtons {
+  height: 3rem;
+  width: 10rem;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  transition-duration: 0.3s;
+  transition-property: background-color;
 }
+
+.aboutButtons:hover {
+  background-color: #D3D3D3; /* Change the background color on hover */
+}
+
+
 .mainAbout{
   width: 100%;
   border-left: 1px solid black;
@@ -679,6 +709,15 @@ h1 {
   margin: 0 40px 0 40px;
   
 }
+.smallBoxImage4 {
+  background-image: url("./assets/IMG_5726.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  margin: 0 40px 0 40px;
+  
+}
 
 
 /* Register Button Navbar Start */
@@ -694,7 +733,9 @@ h1 {
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   outline: none;
 }
 
@@ -703,7 +744,66 @@ h1 {
   line-height: 42px;
   padding: 0;
   border: none;
+  text-decoration: none;
 }
+.registerPage{
+  background-image: url("./assets/register.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+
+.form{
+  width: 50vw;
+  height: 90vh;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+input[type='file'] {
+  padding: 5px;
+}
+
+input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #45a049;
+}
+
+
 
 .btn-register-nav span {
   position: relative;

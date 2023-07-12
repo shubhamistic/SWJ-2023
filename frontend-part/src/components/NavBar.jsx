@@ -5,6 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Button from "react-bootstrap/Button";
 import NavLogo from "./../assets/logo-nav.png";
 import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -31,7 +32,8 @@ function NavBar() {
               <LinkContainer to="/teams"><Nav.Link href="/teams" className="navLink">Teams</Nav.Link></LinkContainer>
               <LinkContainer to="/sponsors"><Nav.Link href="/sponsors" className="navLink">Sponsors</Nav.Link></LinkContainer>
               {/* <LinkContainer to="/teams"><Nav.Link className="navLink">SWJ</Nav.Link></LinkContainer> */}
-              <button class="custom-btn btn-register-nav">REGISTER</button>
+              <Link to="/register" className="custom-btn btn-register-nav">Register</Link>
+
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
