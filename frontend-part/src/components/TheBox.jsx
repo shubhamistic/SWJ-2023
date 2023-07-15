@@ -17,7 +17,7 @@ and prototyping business ideas.
 
 const Component2 = () => (
   <div className='smallBox'>
-    <h2>Objective</h2>
+    <h2 className='boxHeading'>Objective</h2>
     <div className='smallBoxImage2'></div>
     <div>
       <p className='aboutPara'>

@@ -626,8 +626,7 @@ h1 {
 
 .theBox{
   display: flex;
-  border: 1px solid black;
-  height: 80vh;
+  height: 90vh;
 }
 @media (max-width: 768px) {
     .theBox{
@@ -645,22 +644,24 @@ h1 {
 
 .aboutPara{
   text-align: left;
-  margin: 10px 0px 10px 10px;
+  margin: 0 40px 0 40px;
+
 }
 
 
 .aboutButtonContainer{
   display: flex;
   flex-direction: column;
+  width: 12rem;
 }
 .aboutButtons {
   height: 3rem;
-  width: 10rem;
+  width: 100%;
   display: flex;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
+  background-color: transparent;
   transition-duration: 0.3s;
-  transition-property: background-color;
 }
 
 .aboutButtons:hover {
@@ -670,16 +671,17 @@ h1 {
 
 .mainAbout{
   width: 100%;
-  border-left: 1px solid black;
 }
+
+
 
 .smallBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
 }
 
 .smallBoxImage1 {
@@ -687,7 +689,7 @@ h1 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 300px;
   margin: 0 40px 0 40px;
   
 }
@@ -696,7 +698,7 @@ h1 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 250px;
   margin: 0 40px 0 40px;
   
 }
@@ -705,7 +707,7 @@ h1 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 250px;
   margin: 0 40px 0 40px;
   
 }
@@ -714,7 +716,7 @@ h1 {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 300px;
   margin: 0 40px 0 40px;
   
 }
@@ -760,13 +762,21 @@ h1 {
 
 .form{
   width: 50vw;
-  height: 90vh;
+  height: 35rem;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
 }
+@media (max-width: 768px) {
+  .form {
+    width: 90vw;
+  }
+}
+
+
+
 h1 {
   text-align: center;
   margin-bottom: 20px;
