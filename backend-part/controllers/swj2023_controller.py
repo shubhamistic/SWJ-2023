@@ -133,3 +133,25 @@ def handle_upload_transaction_ss(files):
             }
 
     abort(400, 'Error: No file part!')
+
+
+def handle_toggle_payment_status(args, form):
+    password = form.get('password')
+
+    if password:
+        record_id = args.get('id')
+
+        # get current payment status
+        payment_status = database.getPaymentStatus(record_id)
+
+        status = False if payment_status else True
+
+        response = database.setPaymentStatus(record_id, status, password, access='UPDATE')
+
+        if response:
+            return {
+                "message": "Request Successful!",
+                "status": status
+            }
+
+    abort(401, 'Error: Unauthorized, incorrect password!')

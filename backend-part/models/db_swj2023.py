@@ -74,6 +74,17 @@ def createRecord(record):
     ))
     conn.commit()
 
+    # get the id of the record using email_id
+    query = """
+        SELECT id
+        FROM records
+        where email = (%s)
+        LIMIT 1;
+    """
+    cur.execute(query, (record['email'],))
+    result = cur.fetchone()
+    return result[0]
+
 
 def isPasswordCorrect(password, access):
     query = """
@@ -137,3 +148,33 @@ def setMailSentToTrue(record_id, mail_id):
     cur.execute(query, (record_id, mail_id))
 
     conn.commit()
+
+
+def getPaymentStatus(record_id):
+    query = """
+       SELECT paymentStatus
+       FROM records
+       where id = (%s)
+       LIMIT 1;
+    """
+    cur.execute(query, (record_id,))
+
+    payment_status = cur.fetchone()
+
+    return payment_status[0] if payment_status else None
+
+
+def setPaymentStatus(record_id, status, password, access):
+    if isPasswordCorrect(password, access=access):
+        query = """
+            UPDATE records
+            SET paymentStatus = (%s)
+            WHERE id = (%s);
+        """
+        cur.execute(query, (status, record_id))
+
+        conn.commit()
+
+        return True
+
+    return None

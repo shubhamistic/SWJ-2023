@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     overscroll-behavior: none;
@@ -75,4 +79,22 @@ table tr th {
     background-color: gold;
     border-left: solid 1px goldenrod;
     border-right: solid 1px goldenrod;
+}
+
+.payment-button:hover{
+    cursor: pointer;
+}
+.payment-not-approved{
+    background-color: whitesmoke;
+    box-shadow: inset 0 0 10px 1px gray;
+    color: gray;
+}
+.payment-not-approved:hover{
+    background-color: lightgray;
+    color: black;
+}
+.payment-approved{
+    background-color: whitesmoke;
+    box-shadow: inset 0 0 10px 1px palegreen;
+    color: green;
 }
