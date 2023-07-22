@@ -14,7 +14,7 @@ cur.execute('SET GLOBAL max_allowed_packet=67108864')
 
 
 # function to check if email is unique or not
-def isEmailUnique(email):
+def emailIdExists(email):
     query = """
         SELECT COUNT(*)
         FROM records
@@ -28,7 +28,7 @@ def isEmailUnique(email):
 
 
 # function to check if mobile number is unique or not
-def isMobileNumberUnique(mobile_number):
+def mobileNumberExists(mobile_number):
     query = """
         SELECT COUNT(*)
         FROM records
@@ -41,7 +41,7 @@ def isMobileNumberUnique(mobile_number):
 
 
 # function to check if transaction ID is unique or not
-def isTransactionIdUnique(transaction_id):
+def transactionIdExists(transaction_id):
     query = """
             SELECT COUNT(*)
             FROM records
@@ -58,12 +58,12 @@ def isTransactionIdUnique(transaction_id):
 def createRecord(record):
     query = """
         INSERT INTO
-        records (uuid, name, phone, email, workPlace, city, age, gender, transactionId)
+        records (name, team, phone, email, workPlace, city, age, gender, transactionId)
         VALUES ((%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s), (%s));
     """
     cur.execute(query, (
-        record['uuid'],
         record['name'],
+        record['team'],
         record['phone'],
         record['email'],
         record['workPlace'],
@@ -92,43 +92,48 @@ def getRecords(password, access):
     if isPasswordCorrect(password, access=access):
         query = """
             SELECT *
-            FROM records;
+            FROM records
+            ORDER BY id;
         """
         cur.execute(query)
         records = cur.fetchall()
+
         return records
-    return False
+
+    return None
 
 
 # function to get a participant data using its uuid
-def getParticipantInfo(uuid):
+def getParticipantInfo(record_id):
     query = """
-       SELECT uuid, name, phone, email
+       SELECT id, name, phone, email
        FROM records
-       where uuid = (%s)
+       where id = (%s)
        LIMIT 1;
     """
-    cur.execute(query, (uuid,))
+    cur.execute(query, (record_id,))
+
     participant_record = cur.fetchone()
+
     return participant_record
 
 
 # function to set mail sent status to true and store mail id
-def setMailSentToTrue(mail_id, uuid):
+def setMailSentToTrue(record_id, mail_id):
     # set mail status to delivered
     query = """
         UPDATE records
         SET mailStatus = true
-        WHERE uuid = (%s);
+        WHERE id = (%s);
     """
-    cur.execute(query, (uuid,))
+    cur.execute(query, (record_id,))
 
     # store mail id in database
     query = """
         INSERT INTO
-        mail_records (mail_id, uuid)
+        mail_records (record_id, mail_id)
         VALUES ((%s), (%s));
     """
-    cur.execute(query, (mail_id, uuid))
+    cur.execute(query, (record_id, mail_id))
 
     conn.commit()

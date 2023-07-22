@@ -1,1 +1,0 @@
-# Generated QR code will be saved as "qr_{uuid}.png" file in this directory.
