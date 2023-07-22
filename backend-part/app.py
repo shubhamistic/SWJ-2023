@@ -10,12 +10,11 @@ CORS(app)
 @app.route("/")
 def index():
     return {
-        "message": "Welcome to Startup Weekend Jaipur 2023!",
-        "fulfilled": True
+        "message": "Welcome to Startup Weekend Jaipur 2023!"
     }
 
 
-# set up the swj2023 route
+# set up swj2023 route
 app.register_blueprint(swj2023, url_prefix='/swj2023')
 
 

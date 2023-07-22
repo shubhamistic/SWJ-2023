@@ -4,7 +4,6 @@ from googleapiclient.discovery import build
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from google.oauth2.credentials import Credentials
-from mailers import qrcode
 import base64
 import os
 
@@ -44,22 +43,14 @@ def sendMail(data):
     message['from'] = "startupweekendjaipur2023@gmail.com"
     message['subject'] = "Thank you for registering for Startup Weekend Jaipur 2023!"
 
-    # generate the qr.png file and send it to mail
-    qr_file_name = None
-    try:
-        qr_file_name = qrcode.createQR(data['uuid'])
-    except Exception:
-        pass
     html = f"""
         <p> Congratulations {data['name']} on your successful registration for Startup Weekend Jaipur 2023!
             We are excited to have you join us at the event. Please find the attached QR code with this email.
             Kindly make sure to have the QR code scanned at the event entrance to gain entry. We look forward
             to seeing you there!
         </p>
-        <img src="{os.environ.get("WEB_HOST")}/swj2023/file/QR/{qr_file_name}" 
-             alt="If the QR code is not visible, please contact our support team, 
-             whose contact information is provided at the bottom of this email.">
     """
+
     # Attach the HTML content to the email
     message.attach(MIMEText(html, 'html'))
 
@@ -69,7 +60,9 @@ def sendMail(data):
     # send the message over gmail
     try:
         message = service.users().messages().send(userId="me", body={'raw': raw_message}).execute()
+
         # if mail sent successfully
         return message['id']
+
     except Exception:
         return None

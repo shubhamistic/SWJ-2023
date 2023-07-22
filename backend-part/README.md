@@ -14,9 +14,6 @@
   sudo apt update
   
   sudo apt install nginx
-  
-  sudo apt-get install google-chrome-stable
-  chmod +x chromedriver
   ```
 
 - Open nginx configuration file:
@@ -26,8 +23,8 @@
 
 - Clear the contents of the file and add the following lines (SAVE & EXIT):
   ```
-  $ server {
-    server_name <domain.com> <vpc-ip-address>;
+  server {
+    server_name <example.com> <vpc-ip-address>;
     location / {
         include proxy_params;
         proxy_pass http://localhost:5000;
@@ -45,9 +42,9 @@
   export DB_HOST="<db-hostname>"
   export DB_USER="<db-username>"
   export DB_PASS="<db-password>"
-  export WEB_HOST="<your-web-hosting-domain-name>"
+  export SECRET_KEY="<secret-key>"
+  export WEB_HOST="<example.com>"
   export GOOGLE_CLIENT_SECRET_PATH="<path-to-google-client_secret.json>"
-  export WEBDRIVER_PATH="<path-to-google-chrome-webdriver>"
   ```
   
 - Execute commands from a bash_profile in current shell environment:
@@ -55,38 +52,8 @@
   source ~/.bash_profile
   ```
 
-- **MySQL DATABASE CONFIGURATION**
-  ```bash
-  CREATE DATABASE swj2023;
-    
-  USE swj2023;
-    
-  CREATE TABLE records (
-    uuid VARCHAR(36) PRIMARY KEY,
-    name TEXT NOT NULL,
-    phone VARCHAR(255) NOT NULL UNIQUE,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    workPlace TEXT NOT NULL,
-    city TEXT NOT NULL,
-    age TEXT NOT NULL,
-    gender TEXT NOT NULL,
-    transactionId VARCHAR(255) NOT NULL UNIQUE,
-    mailStatus boolean DEFAULT false NOT NULL,
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
-  );
-  
-  CREATE TABLE auth (
-    pass TEXT NOT NULL,
-    access TEXT NOT NULL
-  );
-  
-  CREATE TABLE mail_records (
-    mail_id VARCHAR(36) PRIMARY KEY,
-    uuid TEXT NOT NULL
-  );
-  
-  COMMIT;
-  ```
+- Setup MySQL database configuration
+  - [*click here*](/models/README.md)
 
 - Install gunicorn & gevent-websocket in global environment:
   ```bash
@@ -95,6 +62,8 @@
   
 - Activate virtualenv and install the modules:
   ```bash
+  sudo apt install python3-virtualenv
+  
   virtualenv project-directory
   
   cd project-directory
@@ -103,9 +72,6 @@
   
   pip install -r requirements.txt
   ```
-  
-- Download chrome web driver
-  [CLICK HERE](https://chromedriver.storage.googleapis.com/index.html?path=114.0.5735.90/)
 
 - Run the server using:
   ```bash
