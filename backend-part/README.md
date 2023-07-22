@@ -53,7 +53,7 @@
   ```
 
 - Setup MySQL database configuration
-  - [*click here*](/models/README.md)
+  - [*click here*](/models)
 
 - Install gunicorn & gevent-websocket in global environment:
   ```bash

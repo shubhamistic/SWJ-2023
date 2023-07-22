@@ -14,16 +14,25 @@
                     password: password
                 },
                 success: function (response) {
+                    setPasswordCookie(password);
                     let tableData = response;
                     let htmlTable = $("#data-container table");
                     let count = 1;
                     for (let row of tableData) {
                         let mailStatus = "Undelivered";
                         let mailStatusColor = "red";
-                        if (row[9]) {
+                        if (row[10]) {
                             mailStatus = "Delivered";
                             mailStatusColor = "green";
                         }
+
+                        let paymentStatus = "Approve";
+                        let paymentStatusClass = "payment-not-approved";
+                        if (row[11]) {
+                            paymentStatus = "Approved";
+                            paymentStatusClass = "payment-approved";
+                        }
+
                         htmlTable.append(`
                             <tr>
                                 <td>${row[0]}</td>
@@ -37,10 +46,45 @@
                                 <td>${row[8]}</td>
                                 <td><a href="file/Tss/${row[9]}" target="_blank">${row[9]}</a></td>
                                 <td style="color: ${mailStatusColor}">${mailStatus}</td>
+                                <td
+                                    class="payment-button ${paymentStatusClass}"
+                                    id="pb-${row[0]}"
+                                >
+                                    ${paymentStatus}
+                                </td>
                             </tr>
                         `)
                     }
-                    setPasswordCookie(password);
+
+                    // handle set payment status button
+                    $(".payment-button").on("click", function() {
+                        // Get the ID of the clicked element
+                        const button_id = $(this).attr("id");
+                        const record_id = button_id.slice(3);
+
+                        $.ajax({
+                            url: `/swj2023/toggle-payment-status?id=${record_id}`,
+                            method: 'POST',
+                            data: {
+                                password: password
+                            },
+                            success: function (response) {
+                                const button = $(`#${button_id}`);
+                                if (response.status) {
+                                    button
+                                        .removeClass("payment-not-approved")
+                                        .addClass("payment-approved");
+                                    button.html('Approved');
+                                }
+                                else{
+                                    button
+                                        .removeClass("payment-approved")
+                                        .addClass("payment-not-approved");
+                                    button.html('Approve');
+                                }
+                            }
+                        });
+                    });
                 },
                 error: function (){
                     password = prompt('Wrong password please enter again:', '');

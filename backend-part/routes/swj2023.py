@@ -41,6 +41,11 @@ def createRecord():
     return swj2023_controller.handle_create_record(request.get_json())
 
 
+@swj2023.route('/toggle-payment-status', methods=['POST'])
+def togglePaymentStatus():
+    return swj2023_controller.handle_toggle_payment_status(request.args, request.form)
+
+
 @swj2023.route('/upload-tss', methods=['POST'])
 def uploadTSS():
     return swj2023_controller.handle_upload_transaction_ss(request.files)

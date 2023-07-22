@@ -18,6 +18,7 @@
     gender TEXT NOT NULL,
     transactionId VARCHAR(255) NOT NULL UNIQUE,
     mailStatus boolean DEFAULT false NOT NULL,
+    paymentStatus boolean DEFAULT false NOT NULL,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
   );
   

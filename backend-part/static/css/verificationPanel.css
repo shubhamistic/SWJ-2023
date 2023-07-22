@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#container{
+    height: 100vh;
+    max-width: 480px;
+    width: 100%;
+    min-width: 320px;
+
+    background-color: #121212;
+}
